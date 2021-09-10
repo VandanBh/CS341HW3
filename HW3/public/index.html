@@ -1,0 +1,125 @@
+<!-- Vandan Bhargava -->
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+ </script>
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href = "stylesheets/cheesecakeStyle.css"> <!-- link to CSS file -->
+		<title>Cheescake Order Form</title> <!-- name of the page -->
+	</head>
+
+	<body>
+		<h1>Cheescake Order Form</h1> <!-- header of the page -->
+
+		<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" style="width:150px;height:150px">
+		<!-- sources the image from the site and adjusts size; picture too big, so didn't 
+		change it in CSS otherwise there would be no ugly version as the picture would cover everything-->
+
+		<form id="MainForm"> <!-- place where all the inputs can be taken -->
+			<table id="table"> <!-- created table to mimic what was seen in the picture with the tags that were used -->
+				<tr>
+					<td>Quantity</td>
+					<td>Topping</td>
+				</tr>
+
+				<tr>
+					<td><select id="quantity"> <!-- dropdown -->
+					<option value="1">1</option>
+  					<option value="2">2</option>
+  					<option value="3">3</option>
+  					<option value="4">4</option>
+  					<option value="5">5</option>
+  					<option value="6">6</option>
+  					<option value="7">7</option>
+  					<option value="8">8</option>
+					</select></td>
+
+					<td> <!-- radio buttons -->
+  					<input type="radio" id="plain" name="topping" value="Plain" checked>
+  					<label for="plain">Plain</label><br>
+  					<input type="radio" id="cherry" name="topping" value="Cherry">
+  					<label for="cherry">Cherry</label><br>
+  					<input type="radio" id="chocolate" name="topping" value="Chocolate">
+  					<label for="chocolate">Chocolate</label><br><br>
+					</td>
+				</tr>
+			</table>
+
+			<label id="textAreaLabel" for="instructions">Notes:</label><br> <!-- text area for instructions -->
+			<textarea id="instructions" rows="4" cols="50" placeholder="Enter any special instructions here."></textarea><br>
+
+			<input id="orderButton" type="submit" value="Order"> <!-- button to order -->
+		</form>
+		<p></p>
+		
+		<script src="javascripts/eventCheck.js"></script>
+
+		<!-- significant amount of script taken from w3schools https://www.w3schools.com/howto/howto_css_dropdown.asp-->
+		<style>
+		.dropbtn {
+			background-color: white;
+			color: black;
+			padding: 16px;
+			font-size: 16px;
+			border: 1px solid black;
+		}
+		
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+		
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: lightblue;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+			max-height: 150px;
+			overflow: auto;
+		}
+		
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		
+		.dropdown-content a:hover {background-color: #ddd;}
+		
+		.dropdown:hover .dropdown-content {display: block;}
+		
+		.dropdown:hover .dropbtn {background-color: lightblue;}
+		</style>
+		
+		<!-- code idea and style taken from w3schools -->
+		<!-- made the hrefs void and the main button would change with onclick -->
+		<h3 id="lastOrders">Orders from <div class="dropdown">
+			<button id="dropdownButton" class="dropbtn">Jan</button>
+				<div class="dropdown-content">
+					<a href="javascript:void(0);" onclick="changeJan();">Jan</a>
+			  		<a href="javascript:void(0);" onclick="changeFeb();">Feb</a>
+			  		<a href="javascript:void(0);" onclick="changeMar();">Mar</a>
+					<a href="javascript:void(0);" onclick="changeApr();">Apr</a>
+					<a href="javascript:void(0);" onclick="changeMay();">May</a>
+					<a href="javascript:void(0);" onclick="changeJun();">Jun</a>
+					<a href="javascript:void(0);" onclick="changeJul();">Jul</a>
+					<a href="javascript:void(0);" onclick="changeAug();">Aug</a>
+					<a href="javascript:void(0);" onclick="changeSep();">Sep</a>
+					<a href="javascript:void(0);" onclick="changeOct();">Oct</a>
+					<a href="javascript:void(0);" onclick="changeNov();">Nov</a>
+					<a href="javascript:void(0);" onclick="changeDec();">Dec</a>
+				</div>
+		</div></h3> <!-- displays total orders in the last month with bullet points -->
+		<!-- script used to change the button -->
+		<ul>
+ 	 		<li>11 cherry</li>
+  			<li>17 chocolate</li>
+  			<li>31 plain</li>
+		</ul>
+
+	</body>
+</html>
