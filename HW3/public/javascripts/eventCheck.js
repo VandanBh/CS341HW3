@@ -1,3 +1,7 @@
+// Vandan Bhargava
+
+// This is to check if the form gets submitted and then hide the form and
+// thank the user for ordering the cheesecakes
 $("form").submit(function(e){
     var instr = $("#instructions").val();
     var quantity = $("#quantity").val();
@@ -15,6 +19,9 @@ $("form").submit(function(e){
     e.preventDefault();
 });
 
+// each of these functions below acts on an event click of the
+// dropdown menu to change the button title to whichever month
+// is selected.
 function changeJan(){
     $("#dropdownButton").html("Jan");
 }
