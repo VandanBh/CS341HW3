@@ -100,25 +100,25 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
 		<h3 id="lastOrders">Orders from <div class="dropdown">
 			<button id="dropdownButton" class="dropbtn">Jan</button>
 				<div class="dropdown-content">
-					<a href="javascript:void(0);" onclick="changeJan();">Jan</a>
-			  		<a href="javascript:void(0);" onclick="changeFeb();">Feb</a>
-			  		<a href="javascript:void(0);" onclick="changeMar();">Mar</a>
-					<a href="javascript:void(0);" onclick="changeApr();">Apr</a>
-					<a href="javascript:void(0);" onclick="changeMay();">May</a>
-					<a href="javascript:void(0);" onclick="changeJun();">Jun</a>
-					<a href="javascript:void(0);" onclick="changeJul();">Jul</a>
-					<a href="javascript:void(0);" onclick="changeAug();">Aug</a>
-					<a href="javascript:void(0);" onclick="changeSep();">Sep</a>
-					<a href="javascript:void(0);" onclick="changeOct();">Oct</a>
-					<a href="javascript:void(0);" onclick="changeNov();">Nov</a>
-					<a href="javascript:void(0);" onclick="changeDec();">Dec</a>
+					<a href="javascript:void(0);" onclick="changeMonth('Jan');">Jan</a>
+			  		<a href="javascript:void(0);" onclick="changeMonth('Feb');">Feb</a>
+			  		<a href="javascript:void(0);" onclick="changeMonth('Mar');">Mar</a>
+					<a href="javascript:void(0);" onclick="changeMonth('Apr');">Apr</a>
+					<a href="javascript:void(0);" onclick="changeMonth('May');">May</a>
+					<a href="javascript:void(0);" onclick="changeMonth('Jun');">Jun</a>
+					<a href="javascript:void(0);" onclick="changeMonth('Jul');">Jul</a>
+					<a href="javascript:void(0);" onclick="changeMonth('Aug');">Aug</a>
+					<a href="javascript:void(0);" onclick="changeMonth('Sep');">Sep</a>
+					<a href="javascript:void(0);" onclick="changeMonth('Oct');">Oct</a>
+					<a href="javascript:void(0);" onclick="changeMonth('Nov');">Nov</a>
+					<a href="javascript:void(0);" onclick="changeMonth('Dec');">Dec</a>
 				</div>
 		</div></h3> <!-- displays total orders in the last month with bullet points -->
 		<!-- script used to change the button -->
 		<ul>
- 	 		<li>11 cherry</li>
-  			<li>17 chocolate</li>
-  			<li>31 plain</li>
+ 	 		<li id="forCherry">11 cherry</li>
+  			<li id="forChocolate">17 chocolate</li>
+  			<li id="forPlain">31 plain</li>
 		</ul>
 
 	</body>

@@ -19,42 +19,14 @@ $("form").submit(function(e){
     e.preventDefault();
 });
 
-// each of these functions below acts on an event click of the
+// fucntion below acts on an event click of the
 // dropdown menu to change the button title to whichever month
 // is selected.
-function changeJan(){
-    $("#dropdownButton").html("Jan");
-}
-function changeFeb(){
-    $("#dropdownButton").html("Feb");
-}
-function changeMar(){
-    $("#dropdownButton").html("Mar");
-}
-function changeApr(){
-    $("#dropdownButton").html("Apr");
-}
-function changeMay(){
-    $("#dropdownButton").html("May");
-}
-function changeJun(){
-    $("#dropdownButton").html("Jun");
-}
-function changeJul(){
-    $("#dropdownButton").html("Jul");
-}
-function changeAug(){
-    $("#dropdownButton").html("Aug");
-}
-function changeSep(){
-    $("#dropdownButton").html("Sep");
-}
-function changeOct(){
-    $("#dropdownButton").html("Oct");
-}
-function changeNov(){
-    $("#dropdownButton").html("Nov");
-}
-function changeDec(){
-    $("#dropdownButton").html("Dec");
+function changeMonth(month){
+    $("#dropdownButton").html(month);
+    $.post('/orders', function(data, status){
+        $("#forCherry").text("" + data[0].quantity + " " + data[0].topping)
+        $("#forPlain").text("" + data[1].quantity + " " + data[1].topping)
+        $("#forChocolate").text("" + data[2].quantity + " " + data[2].topping)
+        }, 'json');
 }
